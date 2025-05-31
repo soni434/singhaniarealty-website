@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Properties - Singhania Dreamscapes Realty</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f8fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background: 
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+        url('01.jpg') no-repeat center center fixed;
+      background-size: 120% auto;
+    }
+    @media (max-width: 768px) {
+      body {
+        background: 
+          linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+          url('01.jpg') no-repeat center center;
+        background-size: cover;
+        background-attachment: scroll;
+        min-height: 100vh;
+      }
+    }
+
+    /* Header */
+    .container-header {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #004080;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+      font-weight: 700;
+      font-size: 1.4rem;
+      user-select: none;
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+      border-radius: 5px;
+      object-fit: contain;
+    }
+
+    nav ul.nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul.nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul.nav-links li a:hover,
+    nav ul.nav-links li a.active {
+      background-color: #0066cc;
+      box-shadow: 0 4px 10px rgba(0, 102, 204, 0.4);
+    }
+
+    /* Main Content */
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: white; /* changed to white to stand out on dark background */
+      margin-bottom: 40px;
+      font-weight: 700;
+    }
+
+    .properties-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .property-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+    }
+
+    .property-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    }
+
+    .property-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .property-details {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .property-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 0 0 10px 0;
+      color: #004080;
+    }
+
+    .property-info {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+
+    .btn-details {
+      align-self: flex-start;
+      background-color: #004080;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0, 64, 128, 0.3);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-details:hover {
+      background-color: #0066cc;
+      box-shadow: 0 6px 18px rgba(0, 102, 204, 0.4);
+    }
+
+    /* Call to Action Section */
+    .cta-section {
+      background-color: #004080;
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+      margin-top: 60px;
+      border-radius: 12px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-section h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+    }
+
+    .cta-btn {
+      background-color: #ffcc00;
+      color: #004080;
+      padding: 12px 30px;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: #e6b800;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 60px 20px;
+      background-color: #ffffff;
+      max-width: 900px;
+      margin: 60px auto 0 auto;
+    }
+
+    .faq-section h2 {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 30px;
+    }
+
+    .faq h4 {
+      color: #004080;
+      margin-top: 20px;
+      font-weight: 600;
+    }
+
+    .faq p {
+      color: #444;
+      margin: 8px 0 16px;
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: #00264d;
+      color: #f0f0f0;
+      padding: 40px 20px 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto 30px;
+      gap: 40px;
+      justify-content: space-between;
+    }
+
+    .footer-section {
+      flex: 1 1 220px;
+      min-width: 220px;
+    }
+
+    .footer-section h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: #ff6600;
+      font-weight: 700;
+      border-bottom: 2px solid #ff6600;
+      padding-bottom: 8px;
+    }
+
+    .footer-section p,
+    .footer-section li,
+    .footer-section a {
+      color: #ccc;
+    }
+
+    .footer-section.about p {
+      max-width: 400px;
+    }
+
+    .footer-section.links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-section.links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-section.links a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section.links a:hover {
+      color: #ff6600;
+      text-decoration: underline;
+    }
+
+    .footer-section.contact i {
+      color: #ff6600;
+      min-width: 18px;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .footer-section.social .social-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-section.social a {
+      color: #ccc;
+      font-size: 1.3rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section.social a:hover {
+      color: #ff6600;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #444;
+      padding-top: 15px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #999;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+    }
+
+    .footer-legal-links a {
+      color: #999;
+      margin-left: 15px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-legal-links a:hover {
+      color: #ff6600;
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container-header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav ul.nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .footer-container {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .footer-section {
+        min-width: auto;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .footer-legal-links a {
+        margin-left: 0;
+        margin-right: 15px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header, footer {
+        padding: 15px 20px;
+      }
+
+      main {
+        margin: 20px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container-header">
+    <div class="logo">
+      <img src="logo2.png" alt="Singhania Dreamscapes Realty Logo" />
+      <span>Singhania Dreamscapes Realty</span>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="properties.html" class="active">Properties</a></li>
+        <li><a href="about-us.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h1>Available Properties</h1>
+
+  <div class="properties-grid">
+
+    <article class="property-card">
+      <img src="Modern 3-Bedroom Apartment.jpg" alt="Modern 3-bedroom apartment" class="property-image" />
+      <div class="property-details">
+        <h2 class="property-title">Modern 3-Bedroom Apartment</h2>
+        <p class="property-info">Located in downtown with city views. 3 bedrooms, 2 bathrooms, and a spacious balcony.</p>
+        <a href="#" class="btn-details">View Details</a>
+      </div>
+    </article>
+
+    <article class="property-card">
+      <img src="Cozy Suburban House.jpg" alt="Cozy suburban house" class="property-image" />
+      <div class="property-details">
+        <h2 class="property-title">Cozy Suburban House</h2>
+        <p class="property-info">A perfect family home with 4 bedrooms, a large garden, and garage parking.</p>
+        <a href="#" class="btn-details">View Details</a>
+      </div>
+    </article>
+
+    <article class="property-card">
+      <img src="Luxury Villa with Private Pool.avif" alt="Luxury villa with pool" class="property-image" />
+      <div class="property-details">
+        <h2 class="property-title">Luxury Villa with Private Pool</h2>
+        <p class="property-info">Exclusive villa offering privacy and luxury amenities, including a pool and home theater.</p>
+        <a href="#" class="btn-details">View Details</a>
+      </div>
+    </article>
+
+    <article class="property-card">
+      <img src="Charming Countryside Cottage.avif" alt="Countryside cottage" class="property-image" />
+      <div class="property-details">
+        <h2 class="property-title">Charming Countryside Cottage</h2>
+        <p class="property-info">Escape the city in this cozy 2-bedroom cottage surrounded by nature.</p>
+        <a href="#" class="btn-details">View Details</a>
+      </div>
+    </article>
+
+  </div>
+  
+  <section class="cta-section">
+    <h2>Looking to Buy or Rent?</h2>
+    <p>Contact Singhania Dreamscapes Realty for the best deals and expert advice.</p>
+    <a href="contact.html" class="cta-btn">Get in Touch</a>
+  </section>
+
+  <section class="faq-section" aria-label="Frequently Asked Questions">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq">
+      <h4>How can I schedule a property viewing?</h4>
+      <p>You can contact us via phone or email to set up a viewing appointment at your convenience.</p>
+    </div>
+
+    <div class="faq">
+      <h4>What documents do I need to provide for renting?</h4>
+      <p>Typically, identification, proof of income, and references are required. Contact us for specifics.</p>
+    </div>
+
+    <div class="faq">
+      <h4>Do you offer mortgage assistance?</h4>
+      <p>Yes, we can guide you through financing options and connect you with trusted lenders.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <section class="footer-section about">
+      <h3>About Us</h3>
+                <p>Singhania Dreamscapes Realty Limited specializes in acquiring agricultural lands and transforming them into well-planned townships and colonies. We are committed to creating sustainable and modern communities that offer quality living spaces.</p>
+    </section>
+
+    <section class="footer-section links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+                    <li><a href="#">Properties</a></li>
+                    <li><a href="#">Sell Your Property</a></li>
+                    <li><a href="#">Agents</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Blog</a></li>
+      </ul>
+    </section>
+
+    <section class="footer-section contact">
+      <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> C-25, Phase 1, Focal Point, Ludhiana Pin-code 141010, Punjab, India</p>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fas fa-envelope"></i> info@singhaniainternational.com</p>
+    </section>
+
+    <section class="footer-section social">
+      <h3>Follow Us</h3>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Singhania Dreamscapes Realty. All rights reserved.</p>
+    <div class="footer-legal-links">
+      <a href="terms.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
