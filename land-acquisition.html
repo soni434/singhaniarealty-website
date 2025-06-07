@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Singhania Dreamscapes Realty</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/png" href="logo.jpg">
+  <style>
+    body {
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+
+    /* Hero Section */
+    .page-hero {
+  background-image: url(land.webp); /* Add your image path here */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+
+
+    .page-hero h2 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .page-hero p {
+      font-size: 20px;
+    }
+
+    /* Main Content */
+    .service-content {
+      background-color: white;
+      padding: 60px 20px;
+    }
+
+    .service-content h3 {
+      font-size: 32px;
+      color: #003366;
+      margin-bottom: 20px;
+    }
+
+    .service-content h4 {
+      font-size: 24px;
+      margin: 30px 0 15px;
+      color: #222;
+    }
+
+    .service-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .service-list li {
+      margin-bottom: 12px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+    }
+
+    .service-list i {
+      color: #007bff;
+      margin-right: 10px;
+    }
+
+    /* Section Divider */
+    .section-divider {
+      margin: 50px 0;
+      height: 1px;
+      background: #ddd;
+      border: none;
+    }
+
+    /* Benefits Section */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .benefit-box {
+      background: #ffffff; /* Changed from gray (#f4f6fa) to white */
+      padding: 25px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+
+    .benefit-box i {
+      font-size: 30px;
+      color: #003366;
+      margin-bottom: 10px;
+    }
+
+    .benefit-box h5 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #003366;
+    }
+
+    /* Process Section */
+    .process-list {
+      list-style: decimal inside;
+      padding-left: 0;
+    }
+
+    .process-list li {
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+    /* FAQ Section */
+    .faq-section .faq {
+      margin-bottom: 20px;
+    }
+
+    .faq-section h5 {
+      color: #003366;
+      font-weight: 600;
+    }
+
+    .faq-section p {
+      margin-left: 15px;
+      font-size: 15px;
+      color: #555;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      text-align: center;
+      margin-top: 50px;
+      padding: 40px;
+      background: #003366;
+      color: white;
+      border-radius: 8px;
+    }
+
+    .cta-section h4 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .cta-section p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: white;
+      color: #003366;
+      padding: 12px 25px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .btn-primary:hover {
+      background: #0055a5;
+      color: #fff;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+    
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-container">
+    <div class="brand-area">
+      <img src="logo2.png" alt="Singhania Dreamscapes Realty Logo" class="company-logo" />
+      <div class="company-info">
+        <h1 class="company-heading">Singhania Dreamscapes Realty Limited</h1>
+        <p class="company-tagline">Transforming agricultural lands into dream townships and communities</p>
+      </div>
+    </div>
+
+    <nav class="nav-wrapper">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown">
+          <a href="">About Us</a>
+          <ul class="dropdown">
+            <li><a href="about-us.html">Our Story</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="#">Projects</a>
+          <ul class="dropdown">
+            <li><a href="#">Residential</a></li>
+            <li><a href="#">Commercial</a></li>
+            <li><a href="#">Townships</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="#">Services</a>
+          <ul class="dropdown">
+            <li><a href="land-acquisition.html">Land Acquisition</a></li>
+            <li><a href="#">Consulting</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </li>
+        <li><a href="contact-us.html">Contact</a></li>
+        <li><a href="#" class="cta-button">Get A Quote</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="page-hero land-hero">
+  <div class="container">
+    <h2>Land Acquisition</h2>
+    <p>Strategic acquisition services tailored to drive growth and value</p>
+  </div>
+</section>
+
+<br>
+
+<!-- Main Content -->
+<section class="service-content container">
+  <h3>Professional Land Acquisition Services</h3>
+  <p>
+    Singhania Dreamscapes Realty Limited offers end-to-end land acquisition solutions to clients across India. Our expert team ensures that each acquisition aligns with urban development goals, maximizes land value, and complies with all legal and regulatory requirements.
+  </p>
+
+  <h4>Our Expertise Includes:</h4>
+  <ul class="service-list">
+    <li><i class="fas fa-check-circle"></i> Identification of strategic land parcels</li>
+    <li><i class="fas fa-check-circle"></i> Legal due diligence & title clearance</li>
+    <li><i class="fas fa-check-circle"></i> Regulatory compliance & approvals</li>
+    <li><i class="fas fa-check-circle"></i> Negotiation and landowner engagement</li>
+    <li><i class="fas fa-check-circle"></i> Land pooling, zoning consultation & conversion</li>
+  </ul>
+
+  <hr class="section-divider" />
+
+  <!-- Benefits Section -->
+  <div class="benefits-section">
+    <h4>Why Choose Us?</h4>
+    <div class="benefits-grid">
+      <div class="benefit-box">
+        <i class="fas fa-balance-scale"></i>
+        <h5>Transparent Processes</h5>
+        <p>We ensure every transaction is handled with integrity, legal clarity, and open communication.</p>
+      </div>
+      <div class="benefit-box">
+        <i class="fas fa-map-marked-alt"></i>
+        <h5>Location Intelligence</h5>
+        <p>Our research-backed land scouting identifies areas with the highest future value potential.</p>
+      </div>
+      <div class="benefit-box">
+        <i class="fas fa-handshake"></i>
+        <h5>Strong Local Network</h5>
+        <p>With deep-rooted networks, we build strong relationships with landowners, government officials, and stakeholders.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider" />
+
+  <!-- Process Workflow -->
+  <div class="process-section">
+    <h4>Our Acquisition Process</h4>
+    <ol class="process-list">
+      <li><strong>Requirement Analysis:</strong> Understanding your project goals and land needs.</li>
+      <li><strong>Site Shortlisting:</strong> Identifying and validating viable land parcels.</li>
+      <li><strong>Due Diligence:</strong> Verifying legal titles, encumbrances, and documentation.</li>
+      <li><strong>Negotiation & Agreement:</strong> Engaging with landowners for fair value agreements.</li>
+      <li><strong>Documentation & Registration:</strong> Managing paperwork, conversion, and transfer.</li>
+    </ol>
+  </div>
+
+  <hr class="section-divider" />
+
+  <!-- FAQs Section -->
+  <div class="faq-section">
+    <h4>Frequently Asked Questions</h4>
+    <div class="faq">
+      <h5>Q: Do you acquire agricultural land?</h5>
+      <p>Yes, we specialize in identifying and converting agricultural land for residential and township development as per zoning and regulatory norms.</p>
+    </div>
+    <div class="faq">
+      <h5>Q: How long does the acquisition process take?</h5>
+      <p>The timeline varies depending on land type, location, and legal status, but we aim to complete transactions efficiently within 30–90 days.</p>
+    </div>
+    <div class="faq">
+      <h5>Q: Can you assist with land conversion and zoning?</h5>
+      <p>Absolutely. Our team works with local authorities to help with conversion, zoning compliance, and layout approvals.</p>
+    </div>
+  </div>
+
+  <hr class="section-divider" />
+
+  <!-- CTA Section -->
+  <div class="cta-section">
+    <h4 style="color: white;">Have a Land Requirement?</h4>
+
+    <p>Let our experts help you find, evaluate, and acquire the right land parcel for your next big project.</p>
+    <a href="contact.html" class="btn-primary">Talk to Our Acquisition Team</a>
+  </div>
+</section>
+<!-- Industry we server -->
+<hr class="section-divider" />
+<h4>Industries We Serve</h4>
+<div class="benefits-grid">
+  <div class="benefit-box">
+    <i class="fas fa-building"></i>
+    <h5>Real Estate Developers</h5>
+    <p>Comprehensive support for housing, townships, and gated communities.</p>
+  </div>
+  <div class="benefit-box">
+    <i class="fas fa-industry"></i>
+    <h5>Industrial Projects</h5>
+    <p>Location analysis and acquisition for manufacturing and logistics zones.</p>
+  </div>
+  <div class="benefit-box">
+    <i class="fas fa-school"></i>
+    <h5>Educational & Healthcare</h5>
+    <p>Land sourcing for schools, colleges, and hospitals in developing areas.</p>
+  </div>
+</div>
+
+  <style>
+    h4 {
+  font-size: 28px;
+  color: #003366;          /* Dark blue color */
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;    /* Align left for readability */
+  letter-spacing: 0.5px;
+}
+
+    .benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.benefit-box {
+  background-color: #f4f6fa;
+  padding: 20px 25px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-family: 'Poppins', sans-serif;
+}
+
+.benefit-box i {
+  font-size: 36px;
+  color: #003366;
+  margin-bottom: 12px;
+}
+
+.benefit-box h5 {
+  font-size: 20px;
+  color: #003366;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.benefit-box p {    
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+</style>
+<!-- footer area -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h3>About Us</h3>
+            <p>Singhania Dreamscapes Realty Limited specializes in acquiring agricultural lands and transforming them into well-planned townships and colonies. We are committed to creating sustainable and modern communities that offer quality living spaces.</p>
+        </div>
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Properties</a></li>
+                <li><a href="#">Sell Your Property</a></li>
+                <li><a href="#">Agents</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <h3>Contact Info</h3>
+            <p><i class="fas fa-map-marker-alt"></i> C-25, Phase 1, Focal Point, Ludhiana Pin-code 141010, Punjab, India</p>
+            <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fas fa-envelope"></i> info@singhaniainternational.com</p>
+        </div>
+        <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Singhania Dreamscapes Realty Limited. All rights reserved.</p>
+        <div class="footer-legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </div>
+</footer>
+</style>  
+</style>  
+</body>
+</html>
